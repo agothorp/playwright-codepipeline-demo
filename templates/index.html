@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report a pothole</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="banner">
+    GOV.UK Demo Application
+</div>
+
+<h1>Report a pothole</h1>
+
+<form action="/lookup" method="post">
+
+    <label>Enter postcode</label>
+
+    <input
+        type="text"
+        name="postcode"
+        placeholder="MK18 1RY"
+    >
+
+    <button type="submit">
+        Find your local council
+    </button>
+
+</form>
+
+</body>
+</html>

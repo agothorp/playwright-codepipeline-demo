@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="banner">
+    GOV.UK Demo Application
+</div>
+
+<h1>Report a pothole</h1>
+
+{% if council %}
+<p>
+We've matched the postcode to
+<strong>{{ council }}</strong>
+</p>
+{% else %}
+<p>No council found.</p>
+{% endif %}
+
+</body>
+</html>
