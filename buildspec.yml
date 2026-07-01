@@ -1,0 +1,23 @@
+version: 0.2
+
+env:
+  variables:
+    BASE_URL: "http://postcodelookups-env.eba-bvjsxj8t.eu-west-2.elasticbeanstalk.com"
+
+phases:
+  install:
+    commands:
+      - echo Installing Node dependencies...
+      - npm install
+      - echo Installing Playwright browsers...
+      - npx playwright install --with-deps
+
+  build:
+    commands:
+      - echo Running Playwright tests...
+      - npx playwright test
+
+artifacts:
+  files:
+    - playwright-report/**/*
+    - test-results/**/*
