@@ -1,12 +1,12 @@
 from flask import Flask, render_template, request
 
-app = Flask(__name__)
+application = Flask(__name__)
 
-@app.route("/")
+@application.route("/")
 def home():
     return render_template("index.html")
 
-@app.route("/lookup", methods=["POST"])
+@application.route("/lookup", methods=["POST"])
 def lookup():
 
     postcode = request.form["postcode"].strip().upper()
@@ -22,4 +22,4 @@ def lookup():
     )
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    application.run(host="0.0.0.0", port=5000)
