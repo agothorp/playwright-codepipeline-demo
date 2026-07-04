@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    BASE_URL: "http://postcodelookups-env.eba-bvjsxj8t.eu-west-2.elasticbeanstalk.com"
+    BASE_URL: "http://postcodedemo-env.eba-9ut6r6sj.eu-west-2.elasticbeanstalk.com/"
 
 phases:
   install:
