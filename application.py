@@ -12,7 +12,7 @@ def lookup():
     postcode = request.form["postcode"].strip().upper()
 
     if postcode == "MK18 1RY":
-        council = "Buckinghamshire Council"
+        council = "Milton Keynes"
     else:
         council = None
 
